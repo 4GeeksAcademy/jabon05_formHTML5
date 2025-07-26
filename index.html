@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Form HTML5</title>
+</head>
+<body>
+    <div class="general">
+        <div class="border rounded frame">
+            <div class="container-fluid bg-light border-bottom"> <!-- HEADER-->
+                <h2 my-4>Payment form example</h2>
+            </div>
+                        <!-- FORM-->
+            <form class="row g-3 needs-validation m-4">
+                <div class="alert alert-danger alertfont" role="alert"> <!-- ALERT-->
+                Some fields are missing
+                </div>
+                <div class="col-md-4"> <!-- CARD NUMBER-->
+                    <label for="Card#" class="form-label">Card #</label>
+                    <input type="number" class="form-control" id="Card#" placeholder="XXXXXXXXXXXXXXXXXX" required>
+                </div>
+                <div class="col-md-4"> <!-- CVC-->
+                    <label for="CVC" class="form-label">CVC #</label>
+                    <input type="number" class="form-control" id="CVC" placeholder="0000"  required>
+                    <div class="valid-feedback">
+                    Looks good!
+                    </div>
+                </div>
+                <div class="col-md-4"> <!-- AMOUNT -->
+                    <label for="AMOUNT$" class="form-label">Amount</label>
+                    <div class="input-group mb-3">
+                    <span class="fw-bold"> $ </span>
+                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" id="AMOUNT$" placeholder="Amount">
+                    </div>
+                </div>
+                <div class="col-md-6"> <!-- FIRST NAME-->
+                    <label for="FIRSTNAME" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="FIRSTNAME" required>
+                    <div class="invalid-feedback">
+                    Please provide your first name.
+                    </div>
+                </div>
+                <div class="col-md-6"> <!-- LAST NAME-->
+                    <label for="LASTNAME" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="LASTNAME" required>
+                    <div class="invalid-feedback">
+                    Please provide your Last name.
+                    </div>
+                </div>
+                <div class="col-md-4"> <!-- CITY-->
+                    <label for="CITY" class="form-label">City</label>
+                    <input type="text" class="form-control" id="CITY" required>
+                    <div class="invalid-feedback">
+                    Please provide a valid city.
+                    </div>
+                </div>
+                <div class="col-md-4"> <!-- STATE-->
+                    <label for="STATE" class="form-label">State</label>
+                    <select class="form-select" id="STATE" required>
+                    <option selected disabled value="">Pick a state</option>
+                    <option>...</option>
+                    </select>
+                    <div class="invalid-feedback">
+                    Please select a valid state.
+                    </div>
+                </div>
+                <div class="col-md-4"> <!-- ZIP-->
+                    <label for="ZIP" class="form-label">Postal Code</label>
+                    <input type="text" class="form-control" id="ZIP" required>
+                    <div class="invalid-feedback">
+                    Please provide a valid postal code.
+                    </div>
+                </div>
+                            <!-- CARD SELECTOR-->
+                <div class="col-md-6">
+                    <label for="">We accept:</label>
+                </div>
+                <div class="col-md-6">
+                <label for="MESSAGE" class="form-label">Message</label>
+                </div>
+                <div class="d-flex col-md-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="MasterCard">
+                                <label class="form-check-label" for="MasterCard">
+                                    <i class="fa-brands fa-cc-mastercard fa-lg"></i>
+                                </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="VISA" checked>
+                                <label class="form-check-label" for="VISA">
+                                    <i class="fa-brands fa-cc-visa fa-lg"></i>
+                                </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="DINERSCLUB">
+                                <label class="form-check-label" for="DINERSCLUB">
+                                    <i class="fa-brands fa-cc-diners-club"></i>
+                                </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="AMEX" checked>
+                                <label class="form-check-label" for="AMEX">
+                                    <i class="fa-brands fa-cc-amex fa-lg"></i>
+                                </label>
+                        </div>
+                </div>
+                <div class="col-4">
+                    <!-- EMPTY (It's okay???)-->
+                </div>
+                        <!-- MESSAGE BOX-->
+                <div class="col-6">
+                    <textarea class="form-control" id="MESSAGE" rows="1"></textarea>
+                    <p for="MESSAGE" class="fw-light fs-6">Add any notes here</p>
+                </div>
+            </form>
+                        <!-- Footer-->
+            <div class="container-fluid bg-light border-top footer">
+                <div class="m-2">
+                    <button class="btn btn-secondary" type="submit">Cancel</button>
+                    <button class="btn btn-primary" type="submit">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+
+
+</html>
